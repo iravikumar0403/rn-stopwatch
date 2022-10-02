@@ -1,4 +1,4 @@
-import {React, createContext, useContext, useState, useRef} from 'react';
+import { React, createContext, useContext, useState, useRef } from 'react';
 
 const initialState = {
   hh: 0,
@@ -8,11 +8,11 @@ const initialState = {
 
 const tick = prevState => {
   if (prevState.ss < 59) {
-    return {...prevState, ss: prevState.ss + 1};
+    return { ...prevState, ss: prevState.ss + 1 };
   } else if (prevState.mm < 59) {
-    return {...prevState, mm: prevState.mm + 1, ss: 0};
+    return { ...prevState, mm: prevState.mm + 1, ss: 0 };
   } else {
-    return {hh: prevState.hh + 1, mm: 0, ss: 0};
+    return { hh: prevState.hh + 1, mm: 0, ss: 0 };
   }
 };
 
@@ -23,7 +23,7 @@ const TimerContext = createContext({
   createLap: () => {},
 });
 
-const TimerProvider = ({children}) => {
+const TimerProvider = ({ children }) => {
   const [time, setTime] = useState(initialState);
   const [laps, setLaps] = useState([]);
   const [isTimerRunning, setIsRunning] = useState(false);
@@ -72,4 +72,4 @@ const TimerProvider = ({children}) => {
 
 const useTimer = () => useContext(TimerContext);
 
-export {TimerProvider, useTimer};
+export { TimerProvider, useTimer };

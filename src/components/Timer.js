@@ -1,11 +1,11 @@
-import {StyleSheet, Text} from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import React from 'react';
-import {format2digits} from '../utils';
-import {useTimer} from '../context/timer-context';
+import { format2digits } from '../utils';
+import { useTimer } from '../context/timer-context';
 
 const Timer = () => {
-  const {time} = useTimer();
-  const {hh, mm, ss} = time;
+  const { time } = useTimer();
+  const { hh, mm, ss } = time;
 
   return (
     <Text style={styles.watch}>

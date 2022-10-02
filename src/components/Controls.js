@@ -1,9 +1,9 @@
-import {Button, StyleSheet, View} from 'react-native';
+import { Button, StyleSheet, View } from 'react-native';
 import React from 'react';
-import {useTimer} from '../context/timer-context';
+import { useTimer } from '../context/timer-context';
 
 export default function Controls() {
-  const {isTimerRunning, startTimer, stopTimer, createLap, resetTimer} =
+  const { isTimerRunning, startTimer, stopTimer, createLap, resetTimer } =
     useTimer();
 
   return (

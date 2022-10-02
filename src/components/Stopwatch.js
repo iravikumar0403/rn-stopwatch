@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Controls from './Controls';
 import Laps from './Laps';
 import Timer from './Timer';

@@ -1,10 +1,10 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import {format2digits} from '../utils';
-import {useTimer} from '../context/timer-context';
+import { format2digits } from '../utils';
+import { useTimer } from '../context/timer-context';
 
 export default function Laps() {
-  const {laps} = useTimer();
+  const { laps } = useTimer();
 
   return (
     <View style={styles.scrollview}>
@@ -16,7 +16,7 @@ export default function Laps() {
       )}
       <FlatList
         data={laps}
-        renderItem={({index, item}) => {
+        renderItem={({ index, item }) => {
           return (
             <View style={styles.lapitem}>
               <Text>{laps.length - index}</Text>
