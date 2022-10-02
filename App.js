@@ -1,16 +1,19 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 import Appbar from './src/components/Appbar';
-import Timer from './src/components/Timer';
+import Stopwatch from './src/components/Stopwatch';
+import {TimerProvider} from './src/context/timer-context';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.view}>
-      <View style={styles.view}>
-        <Appbar />
-        <Timer />
-      </View>
-    </SafeAreaView>
+    <TimerProvider>
+      <SafeAreaView style={styles.view}>
+        <View style={styles.view}>
+          <Appbar />
+          <Stopwatch />
+        </View>
+      </SafeAreaView>
+    </TimerProvider>
   );
 };
 
